@@ -11,13 +11,21 @@ public class WriteIFs
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
-     
+        if (player1 != isAlive(true)){
+            displayGameOver(player1);
+        }
     }
     
     public String thermoSTAT(int room) {
         // Write an IF statement that checks the 
         // “temperature(room)” and if that check is less than 70, 
         // calls “heatOn()” else calls “coolOn()”
+
+        if (tempurature(room) < 70){
+            heatOn();
+        } else {
+            coolOn();
+        }
 
 
         
@@ -31,11 +39,19 @@ public class WriteIFs
         // “insideTemp()” is less than 62, 
         // calls “startAFire(fireplace1)”
 
+        if (outsideTemp() < 50 && insideTemp() < 62){
+            startAFire(fireplace1);
+        }
+
     }
 
     public void checkFuel(double fuelLevel) {
         // Write an IF statement that checks “fuelLevel” 
         // and if that check is less than 0.08, calls “refuel()”
+
+        if (fuelLevel < 0.08){
+            refuel();
+        }
 
     }
 
